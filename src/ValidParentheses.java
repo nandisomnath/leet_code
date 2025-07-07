@@ -40,21 +40,58 @@ Constraints:
 s consists of parentheses only '()[]{}'.
  */
 
-
 // I will do it later..
+
+import java.util.Stack;
+
 public class ValidParentheses {
 
+    public boolean isPair(char current, char last) {
+        // find the index for first match
+        switch (last) {
+            case '(':
+                return current == ')';
+            case '{':
+                return current == '}';
+            case '[':
+                return current == ']';
+            default:
+                return false;
+        }
+    }
 
-    // "( [ ] )"
-    //  0 1 2 3 len -> 4
     public boolean isValid(String s) {
-        char[] chars = s.toCharArray();
-        boolean valid = true;
-        return valid;
+        String pairs = "(){}[]";
+        Stack<Character> charStack = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            // check if that is a valid bracket
+            if (!pairs.contains(Character.toString(c))) {
+                // it not a bracket
+                continue;
+            }
+
+            // if it is first element in stack
+            if (charStack.empty()) {
+                charStack.add(c);
+                continue;
+            }
+
+            // check if a pair
+            if (isPair(c, charStack.getLast())) {
+                charStack.pop();
+            } else {
+                charStack.add(c);
+            }
+
+        }
+
+        return charStack.empty();
     }
 
     public static void main(String[] args) {
-        String s = "()";
+        String s = "({[)";
         ValidParentheses parentheses = new ValidParentheses();
         System.out.println(parentheses.isValid(s));
     }
