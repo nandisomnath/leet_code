@@ -1,8 +1,15 @@
 # leet_code
-Here all leetcode problems will be implement in java
 
-# Java
-Java is a great language for dsa. I am a java developer so I want to do it in java.
+[`LeetCode.com`](https://leetcode.com/problemset/) is a special plaform to practice many types of problems in dsa. You can choose from multiple languages but I choose java for this branch.
+
+
+# Java 
+Java is a great general purpose programming language. it is used in dsa for many reasons and also a great day to day programming language choice.
 
 # Run
-just import any class in Main class and run appropriate function from that class
+Compile every java file or directly run it using java command.
+
+```bash
+java Sqrt.java
+```
+
