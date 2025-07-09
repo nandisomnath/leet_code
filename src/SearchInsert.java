@@ -39,7 +39,7 @@ public class SearchInsert {
         int end = nums.length - 1;
         int mid = end / 2;
 
-        while (start <= mid) {
+        while (start < mid) {
 
             if (nums[mid] < target) {
                 start = mid;
@@ -48,8 +48,6 @@ public class SearchInsert {
             } else if (nums[mid] == target) {
                 return mid;
             }
-
-            
 
             mid = (start + end) / 2;
         }
@@ -67,14 +65,17 @@ public class SearchInsert {
             return end;
         }
 
+        if (nums[start] == target) {
+            return start;
+        }
 
         return end;
 
     }
 
     public static void main(String[] args) {
-        int[] nums = { 1,3 };
-        int target = 1;
+        int[] nums = { 1,3,5,6 };
+        int target = 5;
 
         SearchInsert si = new SearchInsert();
         int n = si.searchInsert(nums, target);
