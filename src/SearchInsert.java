@@ -37,8 +37,11 @@ public class SearchInsert {
 
         int start = 0;
         int end = nums.length - 1;
-        int mid = end / 2;
+        int mid = end / 2; // (0+nums.length) == (nums.length)
 
+
+        // in last time the condition will be false beacause
+        // that time start == mid, end == mid + 1 
         while (start < mid) {
 
             if (nums[mid] < target) {
@@ -49,10 +52,11 @@ public class SearchInsert {
                 return mid;
             }
 
+            // start have a value so I have to add it to get mid
             mid = (start + end) / 2;
         }
 
-
+        
         if (target < nums[start]) {
             return start;
         }
@@ -61,10 +65,17 @@ public class SearchInsert {
             return end + 1;
         }
 
+        // if target need to place in middle like
+        // nums[start] = 1, nums[end] = 3, target = 2.
+        // in this case it will be shift end index.
+        // in while loop this place is missed by mid value because mid value is 
+        // more likely going to be equal with start value.
         if (nums[start] < target && target < nums[end]) {
             return end;
         }
 
+        // This also miss by while loop because it break the loop when 
+        // this condition comes true so I have to check it explicitly.
         if (nums[start] == target) {
             return start;
         }
