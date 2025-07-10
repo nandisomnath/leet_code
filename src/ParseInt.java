@@ -134,4 +134,10 @@ public class ParseInt {
         return i;
 
     }
+
+    public static void main(String[] args) {
+       ParseInt ip = new ParseInt();
+       int a = ip.myAtoi("-10");
+       System.out.println(a);
+    }
 }
