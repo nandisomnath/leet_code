@@ -24,6 +24,7 @@ Each string does not contain leading zeros except for the zero itself.
 
 */
 
+
 class AddBinary {
     public String addBinary(String a, String b) {
 
@@ -53,9 +54,19 @@ class AddBinary {
         return rs.toString();
     }
 
+
+
     public static void main(String[] args) {
 
-        var result = new AddBinary().addBinary("1", "111");
+        var a = "11";
+        var b = "1";
+
+        var result = new AddBinary().addBinary(a, b);
         System.out.println(result);
+
+
+    
+        
+
     }
 }
