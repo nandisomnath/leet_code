@@ -26,48 +26,31 @@ Each string does not contain leading zeros except for the zero itself.
 
 class AddBinary {
     public String addBinary(String a, String b) {
-        // check which length is better
 
-        int resultLength = a.length() > b.length() ? a.length()+1 : b.length()+1;
-
-        int[] result = new int[resultLength];
         int borrow = 0;
-        int index = result.length - 1;
-
+        StringBuilder rs = new StringBuilder();
         int i = a.length() - 1, j = b.length() - 1;
 
         while (i >= 0 || j >= 0) {
-
             int f = 0, l = 0;
-
             if (i >= 0) {
                 f = Integer.parseInt(String.valueOf(a.charAt(i)));
             }
-
             if (j >= 0) {
                 l = Integer.parseInt(String.valueOf(b.charAt(j)));
             }
-
             int r = (f + l + borrow) % 2; // 1 0 1
             borrow = (f + l + borrow) >= 2 ? 1 : 0;
-            result[index] = r;
+            rs.insert(0, String.valueOf(r));
 
-            index--;
             j--;
             i--;
         }
 
-        result[index] = borrow;
-
-        String resultString = "";
-        if (result[0] == 1) {
-            resultString += String.valueOf(result[0]);
+        if (borrow == 1) {
+            rs.insert(0, String.valueOf(borrow));
         }
-        for (int z = 1; z < result.length; z++) {
-            resultString += String.valueOf(result[z]);
-        }
-
-        return resultString;
+        return rs.toString();
     }
 
     public static void main(String[] args) {
