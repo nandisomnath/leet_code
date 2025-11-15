@@ -43,9 +43,6 @@ Follow up: If this function is called many times, how would you optimize it?
 
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
 public class ReverseBits {
 
@@ -57,23 +54,14 @@ public class ReverseBits {
     // 2/2 = 1 0
     // 1/2 = 0 1
     public int reverseBits(int n) {
-        
         long result = 0;
-        int[] bits = new int[32];
         int index = 31;
-            
 
         while (n >= 1) {
-            bits[index] = n%2;
+            result += (n%2) * Math.powExact(2L, index);
             
             index--;
             n = n/2;
-        }
-
-        
-
-        for (int i= bits.length-1; i >=0; i--) {
-            result += bits[i] * Math.powExact((long)2, i);
         }
 
         return (int) result;
