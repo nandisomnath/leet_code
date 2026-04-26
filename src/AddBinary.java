@@ -63,10 +63,5 @@ class AddBinary {
 
         var result = new AddBinary().addBinary(a, b);
         System.out.println(result);
-
-
-    
-        
-
     }
 }
