@@ -1,39 +1,38 @@
 # LeetCode Solutions Repository
 
 Welcome to the **LeetCode Solutions Repository**!  
-This repository contains efficient solutions to a diverse range of LeetCode problems, including topics such as Data Structures, Algorithms, Dynamic Programming, Graph Theory, and more. Each solution is written in Java with clear and concise code, often accompanied by explanations to help you understand the underlying concepts.
+This repository contains efficient solutions to a diverse range of LeetCode problems, including topics such as Data Structures, Algorithms, Dynamic Programming, Graph Theory, and more. Each solution is written in Python 3 with clear and concise code, often accompanied by explanations to help you understand the underlying concepts.
 
 ---
 
 ## 🔧 How to Run the Project Files
 
-All solutions are written in **Java**. To run a particular solution:
+All solutions are written in **Python 3**. To run a particular solution:
 
 1. **Clone this repository:**  
-   ```sh
-   git clone https://github.com/nandisomnath/leet_code.git
-   ```
+  ```sh
+  git clone https://github.com/nandisomnath/leet_code.git
+  ```
 
-2. **Navigate to the solution file** you are interested in (typically each file/class corresponds to a problem).
+2. **Navigate to the solution file** you are interested in (typically each file corresponds to a problem).
 
-3. **Compile and run using the command-line (assuming JDK is installed):**  
-   ```sh
-   javac SolutionName.java
-   java SolutionName
-   ```
+3. **Run using the command-line (assuming Python 3 is installed):**  
+  ```sh
+  python3 SolutionName.py
+  ```
 
-   Replace `SolutionName.java` with the file you wish to run.
+  Replace `SolutionName.py` with the file you wish to run.
 
-Or, you may open the project in your favorite Java IDE (such as IntelliJ IDEA, Eclipse, or VS Code with Java extensions).
+Or, you may open the project in your favorite Python IDE (such as PyCharm, VS Code with Python extensions, or IDLE).
 
 ---
 
 ## 📦 Requirements
 
-- **Java Development Kit (JDK) 8 or higher**  
-  Download from: [AdoptOpenJDK](https://adoptopenjdk.net/) or [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
+- **Python 3.x** (preferably 3.6 or higher)  
+  Download from: [Python Official Website](https://www.python.org/downloads/)
 - **Git** (for cloning the repository)
-- **Optional:** A Java IDE for easier navigation and execution
+- **Optional:** A Python IDE for easier navigation and execution
 
 ---
 
@@ -67,3 +66,4 @@ We welcome contributions that **optimize** existing solutions only.
 
 All problems and solutions are inspired by [LeetCode](https://leetcode.com/).  
 Thanks for visiting this repository, and happy coding!
+
